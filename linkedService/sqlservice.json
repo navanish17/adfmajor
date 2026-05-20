@@ -1,15 +1,26 @@
 {
 	"name": "sqlservice",
 	"properties": {
+		"parameters": {
+			"ServerName": {
+				"type": "string"
+			},
+			"DatabaseName": {
+				"type": "string"
+			},
+			"UserName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "adfmajor678.database.windows.net",
-			"database": "adfmajortesting",
+			"server": "@{linkedService().ServerName}",
+			"database": "@{linkedService().DatabaseName}",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "testing",
+			"userName": "@{linkedService().UserName}",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
