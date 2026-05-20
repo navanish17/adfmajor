@@ -1,0 +1,18 @@
+{
+	"name": "adlservice",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://dsadls4567.dfs.core.windows.net",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "keyforall",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "adlspas"
+			}
+		}
+	}
+}
