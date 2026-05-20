@@ -1,0 +1,23 @@
+{
+	"name": "sqlservice",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adfmajor678.database.windows.net",
+			"database": "adfmajortesting",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "testing",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "keyforall",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqldb"
+			}
+		}
+	}
+}
