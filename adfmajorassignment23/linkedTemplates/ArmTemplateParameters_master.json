@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfmajorassignment23"
+		},
+		"adlservice_properties_typeProperties_url": {
+			"value": "https://dsadls4567.dfs.core.windows.net"
+		},
+		"keyforall_properties_typeProperties_baseUrl": {
+			"value": "https://keyforall3456.vault.azure.net/"
+		},
+		"sqlservice_properties_typeProperties_server": {
+			"value": "@{linkedService().ServerName}"
+		},
+		"sqlservice_properties_typeProperties_database": {
+			"value": "@{linkedService().DatabaseName}"
+		},
+		"sqlservice_properties_typeProperties_userName": {
+			"value": "@{linkedService().UserName}"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
