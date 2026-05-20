@@ -1,0 +1,20 @@
+{
+	"name": "adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adlservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "retail/customers/incremental",
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
